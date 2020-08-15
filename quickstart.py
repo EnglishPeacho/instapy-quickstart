@@ -31,7 +31,7 @@ with smart_run(session):
     no=['gym','beast','workout','exercise ','bar',
         'cross','cardio','weights','abs','squats','shredded',
         'fitcouple','couple','gains','food','healthy',
-        'motivation','likefor','like']
+        'motivation','likefor','like','gym']
     
     session.set_dont_like(no)
     session.set_do_follow(enabled=True, percentage=89)
