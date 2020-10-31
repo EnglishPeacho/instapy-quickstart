@@ -24,9 +24,9 @@ with smart_run(session):
     
     session.unfollow_users(amount=30, nonFollowers=True, style="RANDOM", unfollow_after=8*60*60)    
     session.like_by_feed(amount=20, randomize=True, unfollow=False, interact=False)
-    yes=['egirlaesthetic','grungevibes','aestheticblog','vintageoutfit','tumblrgirl','grungeoutfit',
-         '90svintage','aestheticfeed','aestheticoutfit','indieaesthetic','grungefeed','vintageaesthetic','lightaesthetic']
-   #'gothgirl','gothoutfit','egirloutfit','gothgirl',
+    yes=['aesthetic','alternativegirl','altgirl','alternativefashion','alternativestyle',
+         'picsartedit','grungeaesthetics','kawaiifashion','kawaiiaesthetic','altfashion',
+         'alternativephotography','alternativeclothing']
 
     no=['gym','beast','workout','exercise ','bar',
         'cross','cardio','weights','abs','squats','shredded',
@@ -34,9 +34,9 @@ with smart_run(session):
         'motivation','likefor','like','gym']
     
     session.set_dont_like(no)
-    session.set_do_follow(enabled=True, percentage=89)
+    session.set_do_follow(enabled=True, percentage=50)
     
-    session.set_do_comment(enabled=True, percentage=50)
+    session.set_do_comment(enabled=True, percentage=25)
     
     comments=[u':two_hearts: :two_hearts: :sparkles: cute fit ',
               u':fire: adoring this :two_hearts: ',
@@ -71,9 +71,9 @@ with smart_run(session):
               
     session.set_comments(comments,media='Photo')
     
-    session.set_do_like(True, percentage=97)
+    session.set_do_like(True, percentage=75)
     session.set_delimit_liking(enabled=True, max_likes=None, min_likes=1)
-    session.set_delimit_commenting(enabled=True, max_comments=None, min_comments=None)
+    session.set_delimit_commenting(enabled=True, max_comments=None, min_comments=1)
     
                   
     session.set_quota_supervisor(enabled=True, sleep_after=["likes", "comments_d", "follows", 
@@ -97,10 +97,10 @@ with smart_run(session):
                               story=19,randomize=True,random_range_from=71,
                               random_range_to=111)
     
-    session.set_user_interact(amount=2, randomize=True, percentage=95,
+    session.set_user_interact(amount=2, randomize=True, percentage=75,
                               media='Photo')
     
-    session.like_by_tags(random.sample(yes, 13), amount=random.randint(30, 80), interact=True)
+    session.like_by_tags(random.sample(yes, 12), amount=random.randint(30, 80), interact=True)
     
     session.set_do_story(enabled = True, percentage = 56, simulate = True)
     session.story_by_tags(yes)
